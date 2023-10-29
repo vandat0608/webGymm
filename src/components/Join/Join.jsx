@@ -2,18 +2,6 @@ import React from "react";
 import './Join.css';
 import emailjs from '@emailjs/browser';
 const Join = () => {
-    const form = useRef();
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_vqqb49n', 'template_krdbjsk', form.current, 'FDO4CaMdHI__7y7fR')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-      };
     return(
         <div className="Join" id="join-us">
             <div className="left-j">
@@ -24,11 +12,11 @@ const Join = () => {
                 </div>
                 <div>
                     <span>YOUR BODY</span>
-                    <span className="stroke-text">WITH US</span>
+                    <span className="stroke-text">WITH US ?</span>
                 </div>
             </div>
             <div className="right-j">
-                <form ref={form} action="" className="email-container" onSubmit={sendEmail}>
+                <form action="" className="email-container">
                     <input type="email" name="user_email" placeholder="Enter your email Address" />
                     <button className="btn btn-j">Join Now</button>
                 </form>
