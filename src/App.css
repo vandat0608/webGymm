@@ -44,6 +44,6 @@
   background: #f48915;
   position: absolute;
   border-radius: 50%;
-  filter: blur(212px);
+  filter: blur(150px);
   z-index: -9;
 }
